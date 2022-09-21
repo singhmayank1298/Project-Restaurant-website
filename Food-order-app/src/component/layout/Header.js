@@ -3,7 +3,7 @@ import React,{useState} from 'react'
 import classes from './Header.module.css'
 import CartButton from "./CartButton"
 import Mealimage from "../../assets/header image traininer.jpg" //
-
+import Summary from '../UI/Summary'
 
 const Header=()=>{
 const[ItemCount,setItemCount]=useState(0)
@@ -16,7 +16,7 @@ const[ItemCount,setItemCount]=useState(0)
            <div className={classes["main-image"]}>
            <img src={Mealimage} alt="dksdkfmdk"></img>
            </div>
-          
+          <Summary></Summary>
            </>
     )
 
