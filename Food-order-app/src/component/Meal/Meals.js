@@ -1,23 +1,24 @@
-import  './Meals.css'
+import "./Meals.css";
 
-import Card from '../UI/Card'
+import Card from "../UI/Card";
+import UserForm from "./UserForm";
 
+const Meals = (props) => {
+  return (
+    <Card>
+      <div className="container">
+        <div className="change">
+          <h3 className="meal">{props.item} </h3>
 
-
-
-const Meals=(props)=>{
-return(
-    
-    <Card >
-      
-        <p className='meal'>{props.item} </p>
-        <p className='description'>{props.description}</p>
-        <p className='price' >{props.amount}</p>
-
-
+          <p>{props.description}</p>
+          <p className="price">{props.amount}</p>
+        </div>
+        <div className="container2">
+          <UserForm></UserForm>
+        </div>
+      </div>
     </Card>
-        
-)
-}
+  );
+};
 
-export default Meals
+export default Meals;

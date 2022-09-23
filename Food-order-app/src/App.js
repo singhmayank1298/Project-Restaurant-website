@@ -1,8 +1,6 @@
 import Header from "./component/layout/Header";
 import Display from "./component/Meal/DisplayMeals";
 
-
-
 function App() {
   return (
     <div>
