@@ -3,6 +3,7 @@ import Header from "./component/layout/Header";
 import Display from "./component/Meal/DisplayMeals";
 import ReactDOM from "react-dom";
 import { useState } from "react";
+import CartProvider from "./component/store/CartProvider";
 
 function App() {
   const [isCartButton, setisCartButton] = useState(false);
@@ -16,8 +17,8 @@ function App() {
   };
 
   return (
-    <div>
-      <Header></Header>
+    <CartProvider>
+      <Header onClick={CartBoxHandler}></Header>
       <Display></Display>
       {isCartButton === true
         ? ReactDOM.createPortal(
@@ -25,7 +26,7 @@ function App() {
             document.getElementById("Cart_Box")
           )
         : ""}
-    </div>
+    </CartProvider>
   );
 }
 

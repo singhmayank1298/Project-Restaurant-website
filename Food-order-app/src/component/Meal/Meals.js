@@ -6,17 +6,24 @@ import UserForm from "./UserForm";
 const Meals = (props) => {
   return (
     <Card>
-      <div className="container">
-        <div className="change">
-          <h3 className="meal">{props.item} </h3>
+      <li>
+        <div className="container">
+          <div className="change">
+            <h3 className="meal">{props.item} </h3>
 
-          <p>{props.description}</p>
-          <p className="price">{props.amount}</p>
+            <p>{props.description}</p>
+            <p className="price">{props.amount}</p>
+          </div>
+          <div className="container2">
+            <UserForm
+              item={props.item}
+              id={props.id}
+              amount={props.amount}
+            ></UserForm>
+            {/*// vary importent line sending props*/}
+          </div>
         </div>
-        <div className="container2">
-          <UserForm></UserForm>
-        </div>
-      </div>
+      </li>
     </Card>
   );
 };

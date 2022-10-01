@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import CartContext from "../store/cart-contener";
 import "./Input.css";
 
 const Input = (props) => {
@@ -5,7 +7,7 @@ const Input = (props) => {
     <>
       <div className="input">
         <label>{props.label}</label>
-        <input {...props.input}></input>
+        <input defaultValue="1" {...props.input}></input>
       </div>
     </>
   );
